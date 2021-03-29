@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>Extracting link</title>
+    </head>
+    <body>
+        Extracting link<br><br>
+        Copy the script part in the console of the web page to extract the links...
+        
+        <script>
+            x=document.getElementsByTagName('a');
+            y=[];z=[];
+            for(i=0;i<x.length;i++){
+                y[i]=x[i]['href'];
+            }
+            y =y.filter(function(entry)
+            { 
+                return entry.trim() != ""; 
+            });
+            console.log(y); 
+        </script>
+    </body>
+</html>

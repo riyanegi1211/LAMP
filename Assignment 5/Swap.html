@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>Swap Text</title>
+        <style>
+            #p1{
+                color: blue;
+                font-family: 'Courier New', Courier, monospace;
+            }
+            #p2{
+                color:green;
+                font-family: 'Courier New', Courier, monospace;
+            }
+        </style>
+    </head> 
+    <body>
+        <p id="p1">Paragraph 1</p>
+        <p id="p2">Paragraph 2</p>
+        <button onclick="swapText()">Change</button>
+
+        <script>
+            function swapText(){
+                p1 = document.getElementById("p1");
+                p2 = document.getElementById("p2");
+                temp = p1.textContent;
+                p1.textContent = p2.textContent;
+                p2.textContent = temp;
+            }
+        </script>
+    </body>
+</html>
